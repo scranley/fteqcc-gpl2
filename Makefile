@@ -5,6 +5,7 @@ GTKGUI_OBJS=qcc_gtk.o qccguistuff.o
 WIN32GUI_OBJS=qccgui.o qccguistuff.o packager.o
 TUI_OBJS=qcctui.o
 LIB_OBJS=
+USEGUI_CFLAGS="" R_qcc
 
 CC?=gcc
 CFLAGS?=-Wall
