@@ -54,6 +54,12 @@ R_qcc: $(QCC_OBJS) $(COMMON_OBJS) $(TUI_OBJS)
 qcc:
 	$(MAKE) USEGUI_CFLAGS="" R_qcc
 
+R_qcc64: $(QCC_OBJS) $(COMMON_OBJS) $(TUI_OBJS)
+	$(CC) $(BASE_CFLAGS) -m64 -o fteqcc64.bin -O3 $(QCC_OBJS) $(TUI_OBJS) $(COMMON_OBJS) $(BASE_LDFLAGS) -lm
+
+qcc64:
+	$(MAKE) USEGUI_CFLAGS="" R_qcc64
+
 qccmain.o: qccmain.c qcc.h
 	$(DO_CC)
 
