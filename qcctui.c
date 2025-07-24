@@ -251,6 +251,7 @@ int main (int argc, const char **argv)
 		free(blob);
 		return EXIT_SUCCESS;
 	}
+	#ifdef USEGUI
 	if (argc == 3 && (!strncmp(argv[1], "-z", 2) || !strcmp(argv[1], "-0") || !strcmp(argv[1], "-9")))
 	{	//exe -0 foo.pk3dir
 		enum pkgtype_e t;
@@ -266,6 +267,7 @@ int main (int argc, const char **argv)
 		else
 			return EXIT_FAILURE;
 	}
+	#endif
 	for (i = 0; i < argc; i++)
 	{
 		if (!argv[i])
